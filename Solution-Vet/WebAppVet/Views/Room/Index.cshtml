@@ -1,0 +1,15 @@
+﻿@model List<WebAppVet.Models.Room>
+    ViewBag.Title = "Room";
+
+
+<h2>Room</h2>
+
+@foreach (var item in Model)
+{
+    <span>Nombre</span> <span>@item.Name</span> <br />
+    <span> Location </span> <span>@item.Location</span> <br />
+
+
+
+}
+
