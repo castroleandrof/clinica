@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WebAppVet.Interfaces
 {
-    interface IEntity
+    public interface IEntity
     {
-        int Id { get; set; }
+        int id { get; set; }
     }
 }

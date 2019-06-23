@@ -13,7 +13,7 @@ namespace WebAppVet.Data
 
         }
         
-    public DbSet<Room> Rooms { get; set; }
+    public DbSet<Sala> Salas { get; set; }
 
     }
 }

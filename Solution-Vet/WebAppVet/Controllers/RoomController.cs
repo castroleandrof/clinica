@@ -7,14 +7,14 @@ using WebAppVet.Data;
 
 namespace WebAppVet.Controllers
 {
-    public class RoomController : Controller
+    public class SalaController : Controller
     {
         private ClinicaDbContext db = new ClinicaDbContext();
-        // GET: Room
+        // GET: Sala
         public ActionResult Index()
         {
-            var rooms = db.Rooms.ToList();
-            return View(rooms);
+            var Salas = db.Salas.ToList();
+            return View(Salas);
         }
     }
 }
