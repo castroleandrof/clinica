@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using WebAppVet.Interfaces;
 
 namespace WebAppVet.Models
@@ -12,7 +9,7 @@ namespace WebAppVet.Models
         public TipoServicio() { }
 
         public int id { get; set; } 
-        public int nombreServicio { get; set; }
+        public string nombreServicio { get; set; }
         public ICollection<Turno> Turno { get; set; }
 
     }
@@ -26,7 +23,7 @@ namespace WebAppVet.Models
             [Key]
             public int id { get; set; }
             [Required]
-            public int nombreServicio { get; set; }
+            public string nombreServicio { get; set; }
         }
     }
 }

@@ -16,8 +16,10 @@ namespace WebAppVet.Models
         }
 
         public int id { get; set; }
-        public String nombre { get; set; }
-        public String email { get; set; }
+        public int DNI { get; set; }
+        public string nombre { get; set; }
+        public string email { get; set; }
+        public string telefono { get; set; }
 
 
         public IList<Mascota> mascotas { get; private set; }
@@ -31,9 +33,13 @@ namespace WebAppVet.Models
             [Key]
             public int id { get; set; }
             [Required]
+            public int DNI { get; set; }
+            [Required]
             public string nombre { get; set; }
             [Required]
             public int email { get; set; }
+            [Required]
+            public int telefono { get; set; }
             
         }
 

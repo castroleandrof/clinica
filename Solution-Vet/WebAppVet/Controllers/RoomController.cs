@@ -13,7 +13,7 @@ namespace WebAppVet.Controllers
         // GET: Sala
         public ActionResult Index()
         {
-            var Salas = db.Salas.ToList();
+            var Salas = db.Sala.ToList();
             return View(Salas);
         }
     }

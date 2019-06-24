@@ -13,7 +13,15 @@ namespace WebAppVet.Data
 
         }
         
-    public DbSet<Sala> Salas { get; set; }
+    public DbSet<Sala> Sala { get; set; }
+    public DbSet<Cliente> Cliente { get; set; }
+    public DbSet<Doctor> Doctor { get; set; }
+    public DbSet<Mascota> Mascota { get; set; }
+    public DbSet<Pago> Pago { get; set; }
+    public DbSet<TipoDoctor> TipoDoctor { get; set; }
+    public DbSet<TipoMascota> TipoMascota { get; set; }
+    public DbSet<TipoServicio> TipoServicio { get; set; }
+    public DbSet<Turno> Turno { get; set; }
 
     }
 }

@@ -133,10 +133,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\clinica.mdf" />
-    <Content Include="App_Data\clinica_log.ldf">
-      <DependentUpon>clinica.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -163,9 +159,9 @@
     </Compile>
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201906230530033_InitialCreate.cs" />
-    <Compile Include="Migrations\201906230530033_InitialCreate.Designer.cs">
-      <DependentUpon>201906230530033_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201906240027208_InitialCreate.cs" />
+    <Compile Include="Migrations\201906240027208_InitialCreate.Designer.cs">
+      <DependentUpon>201906240027208_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Pago.cs" />
@@ -200,8 +196,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906230530033_InitialCreate.resx">
-      <DependentUpon>201906230530033_InitialCreate.cs</DependentUpon>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906240027208_InitialCreate.resx">
+      <DependentUpon>201906240027208_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

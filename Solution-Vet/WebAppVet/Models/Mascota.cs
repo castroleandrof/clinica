@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using WebAppVet.Interfaces;
@@ -14,17 +15,15 @@ namespace WebAppVet.Models
         }
 
         public int id { get; set;}
-        public int ClientId { get; set; }
+        public Cliente cliente { get; set; }
+        public int idCliente { get; set; }
         public string nombre { get; set; }
         public int idTipoMascota { get; set; }
+        public TipoMascota TipoMascota { get; set; }
         public int edad { get; set; }
 
 
-        public static implicit operator Mascota(List<Mascota> v)
-        {
-            throw new NotImplementedException();
-        }
-
+       public ICollection<Pago> pago { get; set; }
 
     }
 
@@ -35,12 +34,12 @@ namespace WebAppVet.Models
         {
             [Key]
             public int id { get; set; }
-            [Required]
-            public string ClientId { get; set; }
+            [ForeignKey("idCliente")]
+            public int cliente { get; set; }
             [Required]
             public string nombre { get; set; }
-            [Required]
-            public int idTipoMascota { get; set; }
+            [ForeignKey("idTipoMascota")]
+            public TipoMascota TipoMascota { get; set; }
             [Required]
             public int edad { get; set; }
         }
