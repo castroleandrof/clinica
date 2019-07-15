@@ -10,16 +10,15 @@ namespace WebAppVet.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(WebAppVet.Data.ClinicaDbContext context)
         {
             context.Cliente.AddOrUpdate(x => x.id,
-              new Cliente() { id = 1, DNI = 1000000, nombre = "Jose", telefono = "11111111", email = "jose@web.com" },
-              new Cliente() { id = 2, DNI = 2000000, nombre = "Cristian", telefono = "22222222", email = "cristian@web.com" },
-              new Cliente() { id = 3, DNI = 3000000, nombre = "Facundo", telefono = "33333333", email = "facundo@web.com" });
+                new Cliente() { id = 1, DNI = 1000000, nombre = "Jose", telefono = "11111111", email = "jose@web.com" },
+                new Cliente() { id = 2, DNI = 2000000, nombre = "Cristian", telefono = "22222222", email = "cristian@web.com" },
+                new Cliente() { id = 3, DNI = 3000000, nombre = "Facundo", telefono = "33333333", email = "facundo@web.com" });
 
             context.Doctor.AddOrUpdate(x => x.id,
                 new Doctor() { id = 1, nombre = "Gonzalo", idTipoDoctor = 1, email = "gonzalo@web.com" },
@@ -27,14 +26,14 @@ namespace WebAppVet.Migrations
                 new Doctor() { id = 3, nombre = "Fabricio", idTipoDoctor = 2, email = "fabricio@web.com" });
 
             context.Mascota.AddOrUpdate(x => x.id,
-                new Mascota() { id = 1, edad = 1, nombre = "Sam", idTipoMascota = 1, idCliente = 1},
-                new Mascota() { id = 2, edad = 3, nombre = "Negro", idTipoMascota = 2, idCliente = 2},
+                new Mascota() { id = 1, edad = 1, nombre = "Sam", idTipoMascota = 1, idCliente = 1 },
+                new Mascota() { id = 2, edad = 3, nombre = "Negro", idTipoMascota = 2, idCliente = 2 },
                 new Mascota() { id = 3, edad = 4, nombre = "Junior", idTipoMascota = 3, idCliente = 3 });
 
             context.Pago.AddOrUpdate(x => x.id,
-                new Pago() { id = 1, idCliente = 1, importe = 100, medioDePago = "efectivo", idMascota = 1 },
-                new Pago() { id = 2, idCliente = 2, importe = 500, medioDePago = "tarjeta de credito", idMascota = 2 },
-                new Pago() { id = 3, idCliente = 3, importe = 50, medioDePago = "cheque", idMascota = 3 });
+                new Pago() { id = 1, idCliente = 1, importe = 100, medioDePago = "efectivo" },
+                new Pago() { id = 2, idCliente = 2, importe = 500, medioDePago = "tarjeta de credito" },
+                new Pago() { id = 3, idCliente = 3, importe = 50, medioDePago = "cheque" });
 
             context.TipoDoctor.AddOrUpdate(x => x.id,
                 new TipoDoctor() { id = 1, tipoDoctor = "cirujano" },
@@ -59,6 +58,21 @@ namespace WebAppVet.Migrations
                 new Sala() { id = 1, nombre = "Sala 1", ubicacion = "A" },
                 new Sala() { id = 2, nombre = "Sala 2", ubicacion = "A" },
                 new Sala() { id = 3, nombre = "Sala 3", ubicacion = "A" });
+
+            context.Venta.AddOrUpdate(x => x.id,
+                new Venta() { id = 1, idCliente = 1, idPago = 2 },
+                new Venta() { id = 2, idCliente = 3, idPago = 1 },
+                new Venta() { id = 3, idCliente = 2, idPago = 3 });
+
+            context.Insumos.AddOrUpdate(x => x.id,
+                new Insumos() { id = 1, nombre = "alimento balanceado", precio = 20 },
+                new Insumos() { id = 2, nombre = "pipeta antipulgas", precio = 30 },
+                new Insumos() { id = 3, nombre = "correa perro", precio = 15 });
+
+            context.VentaInsumos.AddOrUpdate(x => x.id,
+                new VentaInsumos() { id = 1, idVenta = 1, idInsumo = 2, cantidad = 2 },
+                new VentaInsumos() { id = 2, idVenta = 1, idInsumo = 1, cantidad = 1 },
+                new VentaInsumos() { id = 3, idVenta = 2, idInsumo = 3, cantidad = 1 });
         }
     }
 }

@@ -22,6 +22,8 @@ namespace WebAppVet.Data
     public DbSet<TipoMascota> TipoMascota { get; set; }
     public DbSet<TipoServicio> TipoServicio { get; set; }
     public DbSet<Turno> Turno { get; set; }
-
+    public DbSet<Venta> Venta{ get;  set; }
+    public DbSet<VentaInsumos> VentaInsumos {get;set;}
+    public DbSet<Insumos> Insumos { get; set; }
     }
 }

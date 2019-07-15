@@ -13,7 +13,7 @@ namespace WebAppVet.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201906240027208_InitialCreate"; }
+            get { return "201907142345230_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

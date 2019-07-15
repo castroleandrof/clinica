@@ -159,11 +159,12 @@
     </Compile>
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201906240027208_InitialCreate.cs" />
-    <Compile Include="Migrations\201906240027208_InitialCreate.Designer.cs">
-      <DependentUpon>201906240027208_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201907142345230_InitialCreate.cs" />
+    <Compile Include="Migrations\201907142345230_InitialCreate.Designer.cs">
+      <DependentUpon>201907142345230_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Insumos.cs" />
     <Compile Include="Models\Pago.cs" />
     <Compile Include="Models\TipoDoctor.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -173,6 +174,8 @@
     <Compile Include="Models\TipoMascota.cs" />
     <Compile Include="Models\TipoServicio.cs" />
     <Compile Include="Models\Turno.cs" />
+    <Compile Include="Models\Venta.cs" />
+    <Compile Include="Models\VentaInsumos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,8 +202,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906240027208_InitialCreate.resx">
-      <DependentUpon>201906240027208_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907142345230_InitialCreate.resx">
+      <DependentUpon>201907142345230_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

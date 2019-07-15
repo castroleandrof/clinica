@@ -23,7 +23,7 @@ namespace WebAppVet.Models
         public int edad { get; set; }
 
 
-       public ICollection<Pago> pago { get; set; }
+       public ICollection<Pago> turno { get; set; }
 
     }
 

@@ -8,15 +8,13 @@ using System.Web;
 namespace WebAppVet.Models
 {
     public partial class Pago
-    {
+    { 
         public Pago() { }
 
         public int id { get; set; }
         public int idCliente { get; set; }
         public Cliente cliente { get; set; }
-        public Mascota mascota { get; set; }
         public int importe { get; set; }
-        public int idMascota { get; set; }
         public string medioDePago { get; set; }
 
         public ICollection<Turno> turno { get; set; }
@@ -32,8 +30,6 @@ namespace WebAppVet.Models
             public int id { get; set; }
             [ForeignKey("idCliente")]
             public Cliente cliente { get; set; }
-            [ForeignKey("idMascota")]
-            public Mascota mascota { get; set; }
             [Required]
             public int importe { get; set; }
             [Required]
